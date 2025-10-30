@@ -1,20 +1,13 @@
-number = int(input("Introduce un numero: "))
+number1 = int(input("Introduce un numero entero: "))
+number2 = int(input("Introduce otro un numero entero: "))
 
-# Los números menores o iguales a 1 no son primo!!!!!
-if number <= 1:
-    print("El numero no es primo")
-else:
-    # creamos una flag para que entre
-    primo = True
-    # creo el bucle apra que vea todos los divisores de 2 
-    # hasta
-    # el numero-1
-    for i in range(2, number):
-        if number % i == 0:
-            primo = False
-            break
+def division(divisor, dividendo):
+    if divisor== 0 :
+        print("No se puede dividir entre 0 . Indeterminación")
+        return None #no se si puede usar?¿
+    return (dividendo/divisor,  (dividendo%divisor))
 
-    if primo:
-        print("El numero es primo")
-    else:
-        print("El numero no es primo")
+result = division(number1, number2)
+if result is not None:
+    cociente, resto = result  # acordarse de desampaquetar
+    print(f"{number1} entre {number2} da un cociente de {cociente} y un resto {resto}")
