@@ -1,12 +1,10 @@
-import math
+def ask_marks(subjects):
+    
+    mark = float(input("Introduce tu nota: "))
+    
 
-def area_circle(radio):
+subjects = ["Matemáticas", "Física", "Química", "Historia", "Lingua"]
 
-    return math.pi*radio**2
+notas = []
+print("Eu estudo: " + ", ".join(subjects))
 
-def volume_cylinder(radio, height):
-    return area_circle(radio) * height
-
-radio = float(input("Introduce el radio: "))
-height = float(input("Introduce la altura: "))
-print(f"El valor del area del circulo es {area_circle(radio):.2f} y el volumen del cilindro: {volume_cylinder(radio,height):.2f}")
